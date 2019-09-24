@@ -1,0 +1,128 @@
+<html>
+    <style>
+    
+        *{
+            margin: 0px;
+            padding: 0px;
+            background: #7159c1;
+        }
+
+        .content {
+            width: 100%;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 20px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #806ac8;
+            background: #bfb5e3;
+        }
+
+        .text{
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        .scoreBoard{
+            align-items: center;
+            font-size: 25px;
+            height: 50px;
+            margin-bottom: 10px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #806ac8;
+            background: #bfb5e3;
+        }
+
+        .tableBack{
+            background: #bfb5e3;
+            text-align: center;
+        }
+
+        .score{
+            background: #bfb5e3;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        select#cboDificuldades{
+            width: 100%;
+			text-align: center;
+			color: #fff;
+			background-color: #bfb5e3;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+			padding-left: 15px;
+			font-size: 25px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+
+    </style>
+    
+    <header>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <script type="text/javascript" charset="utf-8" src="oJogo.js"></script>
+        <script type="text/javascript" charset="utf-8" src="interface.js"></script>
+    </header>
+
+    <body onload="exibeMapa()" oncontextmenu="return false;">
+        <div class="content">
+            <div class="center">
+                <p class="title"> Campo Minado </p>
+                    
+                <table style="width: 100%;">
+                    <tr>
+                        <td class="tableBack"><img src = "bandeira.png" class = "score" alt = "Logo Banco"></td>
+                        <td class="tableBack"><img src = "relogio.png" class = "score" alt = "Logo Banco"></td>
+                    </tr>
+                    <tr>
+                        <td><p id="countBandeira" class="score"> 0 / 0 </p></td>
+                        <td><p id="countTimer"    class="score"> 000 </p></td>
+                    </tr>
+                </table>
+
+                <form name = "campo" id = "formVagas">
+                    <table name = "mapa">
+                        <tr id =  "linha1"></tr>
+                        <tr id =  "linha2"></tr>
+                        <tr id =  "linha3"></tr>
+                        <tr id =  "linha4"></tr>
+                        <tr id =  "linha5"></tr>
+                        <tr id =  "linha6"></tr>
+                        <tr id =  "linha7"></tr>
+                        <tr id =  "linha8"></tr>
+                        <tr id =  "linha9"></tr>
+                        <tr id = "linha10"></tr>
+                        <!-- <tr>
+                            <select id="cboDificuldades" onchange="exibeMapa()">
+                                <option value="" selected="selected"></option>
+                                <option value="melNaChupeta">  Mel na chupeta  </option>
+                                <option value="facil">         Facin Facin     </option>
+                                <option value="medio">         Medio           </option>
+                                <option value="dificil">       Dificil         </option>
+                                <option value="semTempoIrmao"> Sem tempo irmao </option>
+                            </select>
+                        </tr> -->
+                    </table>
+                </form>
+            </div>
+        </div>
+    </body>
+    
+    <footer></footer>
+
+</html>
